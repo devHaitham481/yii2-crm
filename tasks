@@ -1,0 +1,3 @@
+// Problems and Tasks that needs to be done for the CRM
+- Validate entered entity column name to be as per sql rules
+- On Create Entity Row inline form, in case of error in re-direction the row still gets created - add proper validation to the form. 

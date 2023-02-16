@@ -1,0 +1,85 @@
+    public function relations()
+    {
+        return array(
+            'project'=>array(self::BELONGS_TO, 'Project', 'project_id')
+            // 'categories'=>array(self::MANY_MANY, 'Category',
+            //     'tbl_post_category(post_id, category_id)'),
+        );
+    }
+
+    public function getSubscription()
+    {
+        return $this->hasOne(Subscriptions::className(), ['ID' => 'SubscriptionID']);
+    }
+
+    public function getMenuItems()
+    {
+        return $this->hasMany(MenuItems::className(), ['MenuID' => 'ID']);
+    }
+
+    // $db = new yii\db\Connection();
+        // $dsn = 'mysql:host=localhost;dbname=crm';
+        // $connection = new \yii\db\Connection([
+        //     'dsn' => $dsn,
+        //     'username' => 'crm',
+        //     'password' => 'Dafa.sa@123',
+        // ]);
+        // $connection->open();
+
+
+        // Yii::$app->db->createCommand("CREATE TABLE {$model->entity_branch} (
+    //     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    //     entity_id BIGINT NOT NULL,
+    //     created_at DATETIME,
+    //     updated_at DATETIME, 
+    //     deleted_at DATETIME,
+    //     FOREIGN KEY (entity_id)
+    //     REFERENCES entity(id)
+    //     ON DELETE CASCADEs
+    //     )");
+
+    Yii::$app->urlManager->createAbsoluteUrl(['site/reset-password', 'token' => $user->password_reset_token]);
+
+    // $entityColumns = $projectEntity->getTableSchema()->getColumnNames();
+
+
+
+    // public static function tableName()
+    // {
+    //     // $id = Yii::$app->requestedParams['tn'];
+    //     // // var_dump(Yii::$app->requestedParams['id']);
+    //     // // $project = Project::findOne($id);
+    //     // // // exit;
+
+    //     // // $dump = EntityColumn::find()->select('column')->where("project_id= {$id}")->one();
+    //     // // $column = $dump->column;
+
+    //     // return $id;
+    // }
+
+    
+
+    <?php 
+
+
+// <?= $form->field($model, 'project_id')->dropdownList($model->getAllProjects(),
+// ['prompt'=>'Select Project']); 
+// ?>
+    // if($entityColumnObject[$entityColumnsCounter]['column_type'] == 'tinyint') {
+        //       $entityDropDownItems = $this->context->getDropDownItems($entityColumnObject[$entityColumnsCounter]['id'], 'entity_column');
+        //         // dd($entityDropDownItems);?>
+         <!-- <td> 
+            <select>  -->
+             <?php
+        //       foreach($entityDropDownItems as $item)
+        //       {
+        //          echo "<option value='{$item['name']}'>{$item['name']}</option>";
+            
+        //  }?>
+           <!-- </select>
+        </td>  -->
+        <?php
+        // continue;
+        //  } 
+        //     $entityColumnsCounter++;
+            ?>
